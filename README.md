@@ -1,6 +1,12 @@
 # Taxi_Service_Trajectory
  An accurate dataset describing trajectories performed by all the 442 taxis running in the city of Porto, in Portugal.
 
+The dataset has been used to find the Charging stations for cars.
+The trajectory of the cars has been used and utilized in the AP Clustering algorithm for finding clusters.
+For more details, visit : madoverdata.com
+
+* This whole exercise was done as a part of assignment submitted to Ather Energy by me.
+
 Attribute Information:
 
 Each data sample corresponds to one completed trip. It contains a total of 9 (nine) features, described as follows:
