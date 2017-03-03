@@ -79,7 +79,7 @@ trip_cab_end_ <- trip_cab_end_[ ,lat_list := gsub( "(.*)(,)","", trip_cab_end_[,
 trip_cab_end_ <- trip_cab_end_[ , end_point:=NULL]
 write.csv(x=trip_cab_end_, file=paste0(call_value,"_",day_value,"_taxi_end.csv",sep=""), row.names=FALSE)
 rm(trip_cab_end_)
-		# This DF will have data for unique start point only
+		# This DF will have data for unique end point only
 trip_cab_end <- data.table(trip_cab_end %>% group_by(end_point) %>% dplyr::summarize(unique_cab = length(unique(taxi_id)), freq_val =n() ))
 trip_cab_end <- trip_cab_end[ ,lon_list := gsub( "(,)(.*)","", trip_cab_end[, end_point]) ]
 trip_cab_end <- trip_cab_end[ ,lat_list := gsub( "(.*)(,)","", trip_cab_end[, end_point]) ]
